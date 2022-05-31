@@ -23,7 +23,7 @@ public class TeamServiceImpl implements TeamService {
     Page<Team> teams = teamRepository.findAll(pageable);
 
     return new ResponseEntity<>(
-        new ApiResponse(true, "Der blev fundet %d".formatted(teams.getSize()), teams),
+        new ApiResponse(true, "Der blev fundet hold", teams),
         HttpStatus.OK);
   }
 

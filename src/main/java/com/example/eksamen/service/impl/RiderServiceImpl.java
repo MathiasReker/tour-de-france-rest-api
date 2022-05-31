@@ -94,13 +94,13 @@ public class RiderServiceImpl implements RiderService {
     if (riders.isEmpty()) {
       return new ResponseEntity<>(
           new ApiResponse(
-              false, "Der blev fundet %d cykelryttere.".formatted(riders.getSize()), riders),
+              false, "Der blev fundet cykelryttere.", riders),
           HttpStatus.NOT_FOUND);
     }
 
     return new ResponseEntity<>(
         new ApiResponse(
-            true, "Der blev fundet %d cykelryttere.".formatted(riders.getSize()), riders),
+            true, "Der blev fundet cykelryttere.", riders),
         HttpStatus.OK);
   }
 
@@ -111,7 +111,7 @@ public class RiderServiceImpl implements RiderService {
 
     return new ResponseEntity<>(
         new ApiResponse(
-            true, "Der blev fundet %d cykelryttere.".formatted(riders.getSize()), riders),
+            true, "Der blev fundet cykelryttere.", riders),
         HttpStatus.OK);
   }
 
@@ -159,7 +159,7 @@ public class RiderServiceImpl implements RiderService {
 
     return new ResponseEntity<>(
         new ApiResponse(
-            true, "Der blev fundet %d cykelryttere.".formatted(riders.getSize()), riders),
+            true, "Der blev fundet %d cykelryttere.", riders),
         HttpStatus.OK);
   }
 
